@@ -241,6 +241,66 @@ $slider-h:420px;
     font-size: 16px;
     position: fixed;
     right: 0;
+    bottom: 20px;
     background: #002958;
     border: 1px solid #1f5287;
+    & img {
+        display: inline-block;
+    }
+    .floor {
+        text-align: center;
+        border-bottom: 1px solid #1f5287;
+        &:last-child{
+            border-bottom: 0;
+        }
+    }
+    .floor1 {
+        font-size: 16px;
+        line-height: 40px;
+        & img {
+            vertical-align: middle;
+        }
+        & span {
+            text-indent: 8px;
+        }
+    }
+    .floor2 {
+        font-size: 14px;
+        ul {
+            & li {
+                & a{
+                    color: #0fa5f2;
+                    text-align: center;
+                    display: block;
+                    line-height: 35px;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .floor3 {
+        color: #ff8900;
+        line-height: 50px;
+        & img {
+            vertical-align: middle;
+        }
+    }
+    .floor4 {
+        color: #b1bcd2;
+        line-height: 50px;
+        font-size: 14px;
+        & img {
+            vertical-align: middle;
+            padding: 0 10px;
+        }
+    }
+    .floor5 {
+        @extend .floor4;
+        & img {
+            width: 18px;
+            vertical-align: middle;
+        }
+    }
 }
