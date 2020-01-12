@@ -46,7 +46,8 @@ gulp.task("copyImg", function () {
 
 // copy 所有格式的图片文件 **：如果里面有文件夹，连同拷贝
 gulp.task("copyImgAll", function () {
-    gulp.src("img/**").pipe(gulp.dest("dist/img"));
+    // gulp.src("img/**").pipe(gulp.dest("dist/img"));
+    gulp.src("images/**").pipe(gulp.dest("dist/images"));
 });
 
 // 多个文件拷贝到同目录下
@@ -55,12 +56,13 @@ gulp.task("copyData", function () {
     gulp.src(["json/*.json", "xml/*.xml", "!xml/xml2.xml"]).pipe(gulp.dest("dist/data"))
 });
 
-// 多个任务同时执行 build 名字可以随便起 default除外
-gulp.task("build", ["copyHtml", "copyImgAll", "copyData"]);
-
-gulp.task("script",function(){
+gulp.task("copyScript",function(){
     gulp.src("js/*.js").pipe(gulp.dest("dist/js"))
 })
+
+// 多个任务同时执行 build 名字可以随便起 default除外
+gulp.task("build", ["copyHtml", "copyImgAll", "copyData","copyScript"]);
+
 
 // 监听  事实监听文件改动，本地修改服务器也会修改  一旦发生改变就执行 build
 gulp.task("watch", function () {

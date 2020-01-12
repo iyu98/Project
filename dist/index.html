@@ -9,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/icon-logo.ico">
     <title>网易暴雪周边商城_中国唯一授权官方商城_魔兽世界_星际争霸2_暗黑3产品</title>
-    <script src="js/jquery-1.11.0.js"></script>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -21,11 +21,101 @@
             <div class="header-container" id="header"></div> <!-- header -->
 
             <div class="main-container">
-                <!-- <div class="fixed-top">
-                <div class="fixed-top-container">
-                    <div class="banner"></div>
-                </div>
-            </div>顶部固定导航 -->
+                <div class="fixed-top">
+                    <div class="fixed-top-container fix-width">
+                        <div class="banner"></div>
+                        <div class="category">
+                            <ul class="main-category-list">
+                                <li class="main-category-item home"><a href="/bmall">首页</a></li>
+                                <li class="main-category-item"><span>居家生活<span class="triangle-top"></span></span>
+                                    <div class="sub-category-container">
+                                        <ul class="sub-category-list fix-width">
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/洗护.jpg" alt="二级分类图标"><span class="display-block">洗护</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/抱枕.jpg" alt="二级分类图标"><span class="display-block">抱枕</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/床品.jpg" alt="二级分类图标"><span class="display-block">床品</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/收纳.jpg" alt="二级分类图标"><span class="display-block">收纳</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/拖鞋.jpg" alt="二级分类图标"><span class="display-block">拖鞋</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/水杯.jpg" alt="二级分类图标"><span class="display-block">水杯</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/家饰.jpg" alt="二级分类图标"><span class="display-block">家饰</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/箱包.jpg" alt="二级分类图标"><span class="display-block">箱包</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/餐橱.jpg" alt="二级分类图标"><span class="display-block">食品</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/雨伞.jpg" alt="二级分类图标"><span class="display-block">雨伞</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="main-category-item"><span>手办模型<span class="triangle-top"></span></span>
+                                    <div class="sub-category-container">
+                                        <ul class="sub-category-list fix-width">
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/积木棋牌.jpg" alt="二级分类图标"><span class="display-block">积木棋牌</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/毛绒.jpg" alt="二级分类图标"><span class="display-block">毛绒玩具</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/手办公仔.jpg" alt="二级分类图标"><span class="display-block">手办公仔</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/1_手办模型.jpg" alt="二级分类图标"><span class="display-block">大型雕像</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/模型.jpg" alt="二级分类图标"><span class="display-block">模型收藏</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/礼包.jpg" alt="二级分类图标"><span class="display-block">预售产品</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="main-category-item"><span>数码外设<span class="triangle-top"></span></span>
+                                    <div class="sub-category-container">
+                                        <ul class="sub-category-list fix-width">
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/电脑外设.jpg" alt="二级分类图标"><span class="display-block">电脑外设</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/鼠标垫.jpg" alt="二级分类图标"><span class="display-block">鼠标垫</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/手机壳.jpg" alt="二级分类图标"><span class="display-block">手机壳</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/充电宝.jpg" alt="二级分类图标"><span class="display-block">充电宝</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="main-category-item"><span>佩饰挂件<span class="triangle-top"></span></span>
+                                    <div class="sub-category-container">
+                                        <ul class="sub-category-list fix-width">
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/吊坠吊带.jpg" alt="二级分类图标"><span class="display-block">吊坠吊带</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/手环.jpg" alt="二级分类图标"><span class="display-block">手环护腕</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/钱包卡套.jpg" alt="二级分类图标"><span class="display-block">钱包卡套</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/徽章挂件.jpg" alt="二级分类图标"><span class="display-block">徽章挂件</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/钥匙链.jpg" alt="二级分类图标"><span class="display-block">钥匙链</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="main-category-item"><span> 服装服饰<span class="triangle-top"></span></span>
+                                    <div class="sub-category-container">
+                                        <ul class="sub-category-list fix-width">
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/T恤.jpg" alt="二级分类图标"><span class="display-block">时尚T恤</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/外套卫衣.jpg" alt="二级分类图标"><span class="display-block">外套卫衣</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/长短裤装.jpg" alt="二级分类图标"><span class="display-block">长短裤装</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/精品鞋帽.jpg" alt="二级分类图标"><span class="display-block">精品鞋帽</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="main-category-item"><span>图书文具<span class="triangle-top"></span></span>
+                                    <div class="sub-category-container">
+                                        <ul class="sub-category-list fix-width">
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/小说图书.jpg" alt="二级分类图标"><span class="display-block">小说图书</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/画册.jpg" alt="二级分类图标"><span class="display-block">画册收藏</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/办公好物.jpg" alt="二级分类图标"><span class="display-block">办公好物</span></li>
+                                            <li class="sub-category-item"><img class="sub-category-icon" src="images/书写用品.jpg" alt="二级分类图标"><span class="display-block">书写用品</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="search">
+                            <img src="images/header-search.png" alt="">
+                            <div class="search-input" style="display: none;">
+                                <span>>></span>
+                                <input placeholder="请输入搜索内容" value>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <ul class="menu-list">
+                                <li>登录</li>
+                                <li>注册</li>
+                            </ul>
+                        </div>
+                        <div class="cart">
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div><!-- 顶部固定导航 -->
                 <div class="category-container font-12">
                     <div class="mask">
                         <div class="fix-width">
@@ -133,54 +223,746 @@
                         </div><!-- 右边固定窗口 -->
                         <div class="home-game-list">
                             <div class="home-game-show">
-                                    <span class="home-game-item">
-                                        <img src="img/ia_100000076.png" alt="魔兽世界">
-                                        <a href="http://bmall.163.com/bmall/search/gameId=37">魔兽世界</a>
-                                    </span>
-                                    <span class="home-game-item">
-                                        <img src="img/ia_100000077.png" alt="守望先锋">
-                                        <a href="http://bmall.163.com/bmall/search/gameId=37">守望先锋</a>
-                                    </span>
-                                    <span class="home-game-item">
-                                        <img src="img/ia_100000078.png" alt="炉石传说">
-                                        <a href="http://bmall.163.com/bmall/search/gameId=38">炉石传说</a>
-                                    </span>
-                                    <span class="home-game-item">
-                                        <img src="img/ia_100000079.png" alt="暗黑破坏神">
-                                        <a href="http://bmall.163.com/bmall/search/gameId=39">暗黑破坏神</a>
-                                    </span>
-                                    <span class="home-game-item">
-                                        <img src="img/ia_100000080.png" alt="星际争霸2">
-                                        <a href="http://bmall.163.com/bmall/search/gameId=41">星际争霸2</a>
-                                    </span>
-                                    <span class="home-game-item">
-                                        <img src="img/ia_100000081.png" alt="风暴英雄">
-                                        <a href="http://bmall.163.com/bmall/search/gameId=42">风暴英雄</a>
-                                    </span>
-                                    <span class="home-game-item">
-                                        <img src="img/ia_100000082.png" alt="魔兽争霸3">
-                                        <a href="http://bmall.163.com/bmall/search/gameId=47">魔兽争霸3</a>
-                                    </span>
-                                    <span class="home-game-item">
-                                        <img src="img/ia_100000083.png" alt="暴雪游戏">
-                                        <a href="http://bmall.163.com/bmall/search/gameId=43">暴雪游戏</a>
-                                    </span>
-                                </div><!-- home-game-show -->
-                            </div><!-- home-game-list -->
+                                <span class="home-game-item">
+                                    <img src="img/ia_100000076.png" alt="魔兽世界">
+                                    <a href="http://bmall.163.com/bmall/search/gameId=37">魔兽世界</a>
+                                </span>
+                                <span class="home-game-item">
+                                    <img src="img/ia_100000077.png" alt="守望先锋">
+                                    <a href="http://bmall.163.com/bmall/search/gameId=37">守望先锋</a>
+                                </span>
+                                <span class="home-game-item">
+                                    <img src="img/ia_100000078.png" alt="炉石传说">
+                                    <a href="http://bmall.163.com/bmall/search/gameId=38">炉石传说</a>
+                                </span>
+                                <span class="home-game-item">
+                                    <img src="img/ia_100000079.png" alt="暗黑破坏神">
+                                    <a href="http://bmall.163.com/bmall/search/gameId=39">暗黑破坏神</a>
+                                </span>
+                                <span class="home-game-item">
+                                    <img src="img/ia_100000080.png" alt="星际争霸2">
+                                    <a href="http://bmall.163.com/bmall/search/gameId=41">星际争霸2</a>
+                                </span>
+                                <span class="home-game-item">
+                                    <img src="img/ia_100000081.png" alt="风暴英雄">
+                                    <a href="http://bmall.163.com/bmall/search/gameId=42">风暴英雄</a>
+                                </span>
+                                <span class="home-game-item">
+                                    <img src="img/ia_100000082.png" alt="魔兽争霸3">
+                                    <a href="http://bmall.163.com/bmall/search/gameId=47">魔兽争霸3</a>
+                                </span>
+                                <span class="home-game-item">
+                                    <img src="img/ia_100000083.png" alt="暴雪游戏">
+                                    <a href="http://bmall.163.com/bmall/search/gameId=43">暴雪游戏</a>
+                                </span>
+                            </div><!-- home-game-show -->
+                        </div><!-- home-game-list -->
+                        <div class="home-hot">
+                            <div class="home-common-header">
+                                <h2 class="title">人气热销</h2>
+                            </div> <!-- home-common-header -->
+                            <div class="home-hot-main clean">
+                                <div class="left-main fl">
+                                    <img src="img/ia_100000084.jpg" alt="主图">
+                                    <a href="http://bmall.163.com/bmall/detail/6191128001/0" class="left">预售 魔兽世界编年史同人画集
+                                        时光之沙漏</a>
+                                </div>
+                                <div class="right-sub sub-one fl">
+                                    <img src="img/100012.jpg" alt="辅图">
+                                    <a href="http://bmall.163.com/bmall/detail/3838009/0">守望先锋 英雄集合鼠标垫（新版）</a>
+                                </div>
+                                <div class="right-sub sub-two fl">
+                                    <img src="img/ia_100000086.jpg" alt="辅图">
+                                    <a href="http://bmall.163.com/bmall/detail/3838009/0">破坏求 毛绒抱枕 守望先锋</a>
+                                </div>
+                                <div class="right-sub sub-three fl">
+                                    <img src="img/ia_100000087.jpg" alt="辅图">
+                                    <a href="http://bmall.163.com/bmall/detail/3838009/0">魔兽世界 艾泽拉斯新春红包套装</a>
+                                </div>
+                                <div class="right-sub sub-four fl">
+                                    <img src="img/ia_100000088.jpg" alt="辅图">
+                                    <a href="http://bmall.163.com/bmall/detail/3838009/0">魔兽世界 吉安娜魔法阵无线充电器</a>
+                                </div>
+                            </div>
+                        </div> <!-- home-hot -->
+                        <div class="home-new">
 
+                            <div class="home-common-header">
+                                <h2 class="title">最新周边</h2>
+                            </div> <!-- home-common-header -->
 
+                            <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide swiper-no-swiping swiper-slide-active">
+                                        <img src="img/ia_100000089.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide swiper-no-swiping swiper-slide-next">
+                                        <img src="img/ia_100000091.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide swiper-no-swiping">
+                                        <img src="img/ia_100000093.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide swiper-no-swiping">
+                                        <img src="img/ia_100000095.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+                                    aria-disabled="false"></div>
+                                <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
+                                    aria-disabled="true"></div>
+                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                            </div><!--  swiper -->
+                        </div> <!-- home-new -->
 
-                        </div> <!-- 中间内容 fix-width -->
-                    </div> <!-- home 中间内容 -->
-                </div>
-            </div><!-- app-container -->
-        </div>
+                        <div class="floors">
 
-        <script>
-            $(function () {
-                $("#header").load("html/header.html")
-            })
-        </script>
+                            <div class="floor-container">
+                                <div class="floor-top">
+                                    <div class="home-common-header">
+                                        <h2 class="title">居家生活</h2>
+                                        <a href="#" class="fr more">查看更多 ></a>
+                                        <ul class="subCategory fr">
+                                            <li>
+                                                <a href="#">洗护</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">抱枕</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">床品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">收纳</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">拖鞋</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">水杯</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">家饰</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">箱包</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">食品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">雨伞</a>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- home-common-header -->
+
+                                    <div>
+                                        <img class="floor-banner" src="images/居家生活banner.jpg" alt="">
+                                    </div>
+                                </div><!-- floor-top -->
+
+                                <div>
+                                    <div class="carrousel-container">
+                                        <span class="show-prev floor"></span>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/书包.png" alt="">
+                                                </div>
+                                                <span class="sold-out-label">已售完</span>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/啤酒杯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/炉石伞.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/阵营地毯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <span class="show-next floor"></span>
+
+                                    </div>
+                                </div>
+                            </div> <!-- floor-container -->
+
+                            <div class="floor-container">
+                                <div class="floor-top">
+                                    <div class="home-common-header">
+                                        <h2 class="title">居家生活</h2>
+                                        <a href="#" class="fr more">查看更多 ></a>
+                                        <ul class="subCategory fr">
+                                            <li>
+                                                <a href="#">洗护</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">抱枕</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">床品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">收纳</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">拖鞋</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">水杯</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">家饰</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">箱包</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">食品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">雨伞</a>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- home-common-header -->
+
+                                    <div>
+                                        <img class="floor-banner" src="images/居家生活banner.jpg" alt="">
+                                    </div>
+                                </div><!-- floor-top -->
+
+                                <div>
+                                    <div class="carrousel-container">
+                                        <span class="show-prev floor"></span>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/书包.png" alt="">
+                                                </div>
+                                                <span class="sold-out-label">已售完</span>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/啤酒杯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/炉石伞.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/阵营地毯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <span class="show-next floor"></span>
+
+                                    </div>
+                                </div>
+                            </div> <!-- floor-container -->
+
+                            <div class="floor-container">
+                                <div class="floor-top">
+                                    <div class="home-common-header">
+                                        <h2 class="title">居家生活</h2>
+                                        <a href="#" class="fr more">查看更多 ></a>
+                                        <ul class="subCategory fr">
+                                            <li>
+                                                <a href="#">洗护</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">抱枕</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">床品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">收纳</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">拖鞋</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">水杯</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">家饰</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">箱包</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">食品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">雨伞</a>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- home-common-header -->
+
+                                    <div>
+                                        <img class="floor-banner" src="images/居家生活banner.jpg" alt="">
+                                    </div>
+                                </div><!-- floor-top -->
+
+                                <div>
+                                    <div class="carrousel-container">
+                                        <span class="show-prev floor"></span>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/书包.png" alt="">
+                                                </div>
+                                                <span class="sold-out-label">已售完</span>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/啤酒杯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/炉石伞.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/阵营地毯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <span class="show-next floor"></span>
+
+                                    </div>
+                                </div>
+                            </div> <!-- floor-container -->
+
+                            <div class="floor-container">
+                                <div class="floor-top">
+                                    <div class="home-common-header">
+                                        <h2 class="title">居家生活</h2>
+                                        <a href="#" class="fr more">查看更多 ></a>
+                                        <ul class="subCategory fr">
+                                            <li>
+                                                <a href="#">洗护</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">抱枕</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">床品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">收纳</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">拖鞋</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">水杯</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">家饰</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">箱包</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">食品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">雨伞</a>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- home-common-header -->
+
+                                    <div>
+                                        <img class="floor-banner" src="images/居家生活banner.jpg" alt="">
+                                    </div>
+                                </div><!-- floor-top -->
+
+                                <div>
+                                    <div class="carrousel-container">
+                                        <span class="show-prev floor"></span>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/书包.png" alt="">
+                                                </div>
+                                                <span class="sold-out-label">已售完</span>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/啤酒杯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/炉石伞.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/阵营地毯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <span class="show-next floor"></span>
+
+                                    </div>
+                                </div>
+                            </div> <!-- floor-container -->
+
+                            <div class="floor-container">
+                                <div class="floor-top">
+                                    <div class="home-common-header">
+                                        <h2 class="title">居家生活</h2>
+                                        <a href="#" class="fr more">查看更多 ></a>
+                                        <ul class="subCategory fr">
+                                            <li>
+                                                <a href="#">洗护</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">抱枕</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">床品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">收纳</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">拖鞋</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">水杯</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">家饰</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">箱包</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">食品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">雨伞</a>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- home-common-header -->
+
+                                    <div>
+                                        <img class="floor-banner" src="images/居家生活banner.jpg" alt="">
+                                    </div>
+                                </div><!-- floor-top -->
+
+                                <div>
+                                    <div class="carrousel-container">
+                                        <span class="show-prev floor"></span>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/书包.png" alt="">
+                                                </div>
+                                                <span class="sold-out-label">已售完</span>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/啤酒杯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/炉石伞.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/阵营地毯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <span class="show-next floor"></span>
+
+                                    </div>
+                                </div>
+                            </div> <!-- floor-container -->
+
+                            <div class="floor-container">
+                                <div class="floor-top">
+                                    <div class="home-common-header">
+                                        <h2 class="title">居家生活</h2>
+                                        <a href="#" class="fr more">查看更多 ></a>
+                                        <ul class="subCategory fr">
+                                            <li>
+                                                <a href="#">洗护</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">抱枕</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">床品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">收纳</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">拖鞋</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">水杯</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">家饰</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">箱包</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">食品</a><span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="#">雨伞</a>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- home-common-header -->
+
+                                    <div>
+                                        <img class="floor-banner" src="images/居家生活banner.jpg" alt="">
+                                    </div>
+                                </div><!-- floor-top -->
+
+                                <div>
+                                    <div class="carrousel-container">
+                                        <span class="show-prev floor"></span>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/书包.png" alt="">
+                                                </div>
+                                                <span class="sold-out-label">已售完</span>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/啤酒杯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/炉石伞.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <div class="carrousel-item floor">
+                                            <div class="img-container">
+                                                <div class="hover-enlarge">
+                                                    <img src="images/阵营地毯.png" alt="">
+                                                </div>
+                                            </div>
+                                            <span class="prod-title">部落 阵营双肩包 魔兽世界</span>
+                                            <span class="prod-price">
+                                                ￥ 169.00
+                                            </span>
+                                        </div>
+                                        <span class="show-next floor"></span>
+
+                                    </div>
+                                </div>
+                            </div> <!-- floor-container -->
+
+                        </div><!-- floors -->
+                    </div> <!-- 中间内容 fix-width -->
+                </div> <!-- home 中间内容 -->
+                <div class="body-bottom-container">
+                    <div class="fix-width">
+
+                        <div class="section section-left fl">
+                            <p class="section-title">客户服务</p>
+                            <span class="client-service">在线客服</span class="client-service">
+                            <span class="client-feedback">用户反馈</span class="client-service">
+                        </div>
+                        <div class="section section-mid fl">
+                            <p class="section-title">网易暴雪周边商城</p>
+                            <p class="section-content">是网易旗下运营暴雪游戏周边产品的官网购物商场。秉承网易一贯的严谨态度，力求帮消费者引进、设计、制造优质的暴雪周边产品</p>
+                            <p class="contacts">
+                                <span>关注我们</span>
+                                <img class="wechat" src="images/gmOyayaNqHsAAAAASUVORK5CYII_.png" alt="">
+                                <img class="microblog" src="images/gNPdcN0wd8G7wAAAABJRU5ErkJggg__.png" alt="">
+                            </p>
+                            <div class="code-board hidden fl">
+
+                                <div class="mask"></div>
+                                <div class="angle"></div>
+                                <img src="images/wechat_qrcode.28e9e58c.png" alt="">
+
+                            </div>
+                        </div>
+                        <div class="section section-right">
+                            <img class="net-ease" src="images/net_ease_logo_home.e8b499d1.png" alt="">
+                            <img class="baoxue" src="images/wAAAABJRU5ErkJggg__.png" alt="">
+                        </div>
+                    </div>
+                </div> <!-- body-bottom-container -->
+            </div><!-- main-container -->
+
+            <div id="footer"></div>
+
+        </div><!-- app-container -->
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+        $(document).ready(function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                speed: 0,
+                direction: 'horizontal',
+                loop: true,
+                spaceBetween: 15,
+                allowSlideNext: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+
+            $("#header").load("html/header.html"); /* 公共头部 */
+            $("#footer").load("html/footer.html"); /* 公共页脚 */
+        });
+    </script>
 </body>
 
 </html>
