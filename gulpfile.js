@@ -53,7 +53,7 @@ gulp.task("copyImgAll", function () {
 // 多个文件拷贝到同目录下
 // 如果有单个文件不想copy 那就再文件名前面添加 ! 感叹号，代表排除某个文件
 gulp.task("copyData", function () {
-    gulp.src(["json/*.json", "xml/*.xml", "!xml/xml2.xml"]).pipe(gulp.dest("dist/data"))
+    gulp.src("json/*.json").pipe(gulp.dest("dist/data"))
 });
 
 gulp.task("copyScript",function(){
@@ -64,9 +64,9 @@ gulp.task("copyScript",function(){
 gulp.task("build", ["copyHtml", "copyImgAll", "copyData","copyScript"]);
 
 
-// 监听  事实监听文件改动，本地修改服务器也会修改  一旦发生改变就执行 build
+// 监听  事实监听文件改动，本地修改服务器也会修改
 gulp.task("watch", function () {
-    gulp.watch(["sass/*.scss", "*.html"], ["sass", "copyHtml"]);
+    gulp.watch(["sass/*.scss", "*.html", "js/*.js", "json/*.json"], ["sass", "copyHtml", "copyScript", "copyData"]);
 });
 
 //  livereload: true 实施加载
@@ -78,7 +78,7 @@ gulp.task("server", function () {
 });
 
 // 为保证每次监听都是最新的，再监听之前先进行build操作。
-gulp.task("default", ["server", "watch", "sass", "concat", "babel"]);
+gulp.task("default", ["server", "watch", "sass", "babel"]);
 
 
 // gulp sass   .pipe(sass()):sass转css
@@ -95,12 +95,12 @@ gulp.task("sass", function () {
 
 // concat 合并js
 gulp.task("concat", function () {
-    gulp.src(["js/a.js", "js/b.js"])
-        .pipe(concat("ab.js"))  // 要合并的名字
+    gulp.src("js/index.js")
+        .pipe(concat("index.js"))  // 要合并的名字
         .pipe(uglify()) // 压缩js  注意位置，再合并之后，放置之前
         .pipe(gulp.dest("dist/js")) // 先把合并的放进去
-    // .pipe(rename({ suffix: ".min" })) // 重命名 一份min.js再放到指定位置
-    // .pipe(gulp.dest("dist/js"))
+        .pipe(rename({ suffix: ".min" })) // 重命名 一份min.js再放到指定位置
+        .pipe(gulp.dest("dist/js"))
 })
 
 

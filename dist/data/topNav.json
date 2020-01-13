@@ -1,0 +1,146 @@
+{
+    "jj": [
+        {
+            "title": "洗护",
+            "img": "images/洗护.jpg"
+        },
+        {
+            "title": "抱枕",
+            "img": "images/抱枕.jpg"
+        },
+        {
+            "title": "床品",
+            "img": "images/床品.jpg"
+        },
+        {
+            "title": "收纳",
+            "img": "images/收纳.jpg"
+        },
+        {
+            "title": "拖鞋",
+            "img": "images/拖鞋.jpg"
+        },
+        {
+            "title": "水杯",
+            "img": "images/水杯.jpg"
+        },
+        {
+            "title": "家饰",
+            "img": "images/家饰.jpg"
+        },
+        {
+            "title": "箱包",
+            "img": "images/箱包.jpg"
+        },
+        {
+            "title": "食品",
+            "img": "images/餐橱.jpg"
+        },
+        {
+            "title": "雨伞",
+            "img": "images/雨伞.jpg"
+        }
+    ],
+    "mx": [
+        {
+            "title": "积木棋牌",
+            "img": "images/积木棋牌.jpg"
+        },
+        {
+            "title": "毛绒玩具",
+            "img": "images/毛绒.jpg"
+        },
+        {
+            "title": "手办公仔",
+            "img": "images/手办公仔.jpg"
+        },
+        {
+            "title": "大型雕像",
+            "img": "images/1_手办模型.jpg"
+        },
+        {
+            "title": "模型收藏",
+            "img": "images/模型.jpg"
+        },
+        {
+            "title": "预售产品",
+            "img": "images/礼包.jpg"
+        }
+    ],
+    "sm": [
+        {
+            "title": "电脑外设",
+            "img": "images/电脑外设.jpg"
+        },
+        {
+            "title": "鼠标垫",
+            "img": "images/鼠标垫.jpg"
+        },
+        {
+            "title": "手机壳",
+            "img": "images/手机壳.jpg"
+        },
+        {
+            "title": "充电宝",
+            "img": "images/充电宝.jpg"
+        }
+    ],
+    "pj": [
+        {
+            "title": "吊坠吊带",
+            "img": "images/吊坠吊带.jpg"
+        },
+        {
+            "title": "手环护腕",
+            "img": "images/手环.jpg"
+        },
+        {
+            "title": "钱包卡套",
+            "img": "images/钱包卡套.jpg"
+        },
+        {
+            "title": "徽章挂件",
+            "img": "images/徽章挂件.jpg"
+        },
+        {
+            "title": "钥匙链",
+            "img": "images/钥匙链.jpg"
+        }
+    ],
+    "fz": [
+        {
+            "title": "时尚T恤",
+            "img": "images/T恤.jpg"
+        },
+        {
+            "title": "外套卫衣",
+            "img": "images/外套卫衣.jpg"
+        },
+        {
+            "title": "长短裤装",
+            "img": "images/长短裤装.jpg"
+        },
+        {
+            "title": "精品鞋帽",
+            "img": "images/精品鞋帽.jpg"
+        }
+    ],
+    "ts": [
+        {
+            "title": "小说图书",
+            "img": "images/小说图书.jpg"
+        },
+        {
+            "title": "画册收藏",
+            "img": "images/画册.jpg"
+        },
+        {
+            "title": "办公好物",
+            "img": "images/办公好物.jpg"
+        },
+        {
+            "title": "书写用品",
+            "img": "images/书写用品.jpg"
+        }
+    ]
+}
