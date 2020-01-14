@@ -7,11 +7,14 @@
     <meta name="keywords" content="网易暴雪周边商城，魔兽世界，暗黑3，星际争霸2，唯一官方周边商城。">
     <meta name="description" content="在线热销魔兽世界、星际争霸Ⅱ主题T恤、外套、鼠标、笔记本、手办模型、毛绒玩具等多种产品，官方品质保证，完善售后服务。即使是在现实生活中，也要将游戏兴致进行到底！">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-1.11.3.min.js"></script>
     <link rel="icon" href="images/icon-logo.ico">
     <title>网易暴雪周边商城_中国唯一授权官方商城_魔兽世界_星际争霸2_暗黑3产品</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/common-header.css">
+    <link rel="stylesheet" href="css/common-footer.css">
     <link rel="stylesheet" href="css/index.css">
 
 </head>
@@ -28,10 +31,10 @@
                         <div class="category" id="top-category">
 
                         </div><!-- top-category -->
-                        <div class="search">
+                        <div class="search" id="top-search">
                             <img src="images/header-search.png" alt="">
                             <div class="search-input" style="display: none;">
-                                <span>>></span>
+                                <span class="top-hide">>></span>
                                 <input placeholder="请输入搜索内容" value>
                             </div>
                         </div>
@@ -46,6 +49,7 @@
                         </div>
                     </div>
                 </div><!-- 顶部固定导航 -->
+
                 <div class="category-container font-12" id="shop-fenlei-nav">
                     <div class="mask">
                         <div class="fix-width">
@@ -71,9 +75,7 @@
                             </ul>
                         </div>
                         <div class="slider-box-2">
-                            <ul>
-                    
-                            </ul>
+
                         </div>
                         <div class="slider-box-3 fix-width">
                             <span class="prev">
@@ -81,6 +83,102 @@
                             </span>
                         </div>
                     </div><!-- Swiper -->
+                    <script>
+                        $(function(){
+                            function $(param) {
+                                if (arguments[1] == true) {
+                                    return document.querySelectorAll(param);
+                                } else {
+                                    return document.querySelector(param);
+                                }
+                            }
+                            let $box = $(".slider");
+                            let $box1 = $(".slider-box-1 ul li", true);
+                            let $box2 = $(".slider-box-2");
+                            let $box3 = $(".slider-box-3");
+                            let $length = $box1.length;
+
+                            let str = "";
+                            for (let i = 0; i < $length; i++) {
+                                if (i == 0) {
+                                    str += "<span class='on'></span>";
+                                } else {
+                                    str += "<span></span>";
+                                }
+                            }
+                            $box2.innerHTML = str;
+
+                            let current = 0;
+
+                            let timer;
+                            timer = setInterval(go, 1000);
+                            function go() {
+                                for (let j = 0; j < $length; j++) {
+                                    $box1[j].style.display = "none";
+                                    $box2.children[j].className = "";
+                                }
+                                if ($length == current) {
+                                    current = 0;
+                                }
+                                $box1[current].style.display = "block";
+                                $box2.children[current].className = "on";
+                                current++;
+                            }
+
+                            for (let k = 0; k < $length; k++) {
+                                $box1[k].onmouseover = function () {
+                                    clearInterval(timer);
+                                }
+                                $box1[k].onmouseout = function () {
+                                    timer = setInterval(go, 1000);
+                                }
+                            }
+                            for (let p = 0; p < $box3.children.length; p++) {
+                                $box3.children[p].onmouseover = function () {
+                                    clearInterval(timer);
+                                };
+                                $box3.children[p].onmouseout = function () {
+                                    timer = setInterval(go, 1000);
+                                }
+                            }
+
+                            for (let u = 0; u < $length; u++) {
+                                $box2.children[u].index = u;
+                                $box2.children[u].onmouseover = function () {
+                                    clearInterval(timer);
+                                    for (let j = 0; j < $length; j++) {
+                                        $box1[j].style.display = "none";
+                                        $box2.children[j].className = "";
+                                    }
+                                    this.className = "on";
+                                    $box1[this.index].style.display = "block";
+                                    current = this.index + 1;
+                                }
+                                $box2.children[u].onmouseout = function () {
+                                    timer = setInterval(go, 1000);
+                                }
+                            }
+
+                            $box3.children[0].onclick = function () {
+                                back();
+                            }
+                            $box3.children[1].onclick = function () {
+                                go();
+                            }
+                            function back() {
+                                for (let j = 0; j < $length; j++) {
+                                    $box1[j].style.display = "none";
+                                    $box2.children[j].className = "";
+                                }
+                                if (current == 0) {
+                                    current = $length;
+                                }
+                                $box1[current - 1].style.display = "block";
+                                $box2.children[current - 1].className = "on";
+                                current--;
+                            }
+                        })
+                    </script>
 
                     <div class="fix-width">
                         <div class="right-window">
@@ -114,46 +212,49 @@
                                 <span>回到顶部</span>
                             </div>
                         </div><!-- 右边固定窗口 -->
+
                         <div class="home-game-list">
                             <div class="home-game-show">
                                 <span class="home-game-item">
-                                    <img src="images/ia_100000076.png" alt="魔兽世界">
+                                    <img src="images/1.jpg" alt="魔兽世界">
                                     <a href="http://bmall.163.com/bmall/search/gameId=37">魔兽世界</a>
                                 </span>
                                 <span class="home-game-item">
-                                    <img src="images/ia_100000077.png" alt="守望先锋">
+                                    <img src="images/6.jpg" alt="守望先锋">
                                     <a href="http://bmall.163.com/bmall/search/gameId=37">守望先锋</a>
                                 </span>
                                 <span class="home-game-item">
-                                    <img src="images/ia_100000078.png" alt="炉石传说">
+                                    <img src="images/5.jpg" alt="炉石传说">
                                     <a href="http://bmall.163.com/bmall/search/gameId=38">炉石传说</a>
                                 </span>
                                 <span class="home-game-item">
-                                    <img src="images/ia_100000079.png" alt="暗黑破坏神">
+                                    <img src="images/4.jpg" alt="暗黑破坏神">
                                     <a href="http://bmall.163.com/bmall/search/gameId=39">暗黑破坏神</a>
                                 </span>
                                 <span class="home-game-item">
-                                    <img src="images/ia_100000080.png" alt="星际争霸2">
+                                    <img src="images/2.jpg" alt="星际争霸2">
                                     <a href="http://bmall.163.com/bmall/search/gameId=41">星际争霸2</a>
                                 </span>
                                 <span class="home-game-item">
-                                    <img src="images/ia_100000081.png" alt="风暴英雄">
+                                    <img src="images/3.jpg" alt="风暴英雄">
                                     <a href="http://bmall.163.com/bmall/search/gameId=42">风暴英雄</a>
                                 </span>
                                 <span class="home-game-item">
-                                    <img src="images/ia_100000082.png" alt="魔兽争霸3">
+                                    <img src="images/90x50.jpg" alt="魔兽争霸3">
                                     <a href="http://bmall.163.com/bmall/search/gameId=47">魔兽争霸3</a>
                                 </span>
                                 <span class="home-game-item">
-                                    <img src="images/ia_100000083.png" alt="暴雪游戏">
+                                    <img src="images/未标题_2.jpg" alt="暴雪游戏">
                                     <a href="http://bmall.163.com/bmall/search/gameId=43">暴雪游戏</a>
                                 </span>
                             </div><!-- home-game-show -->
                         </div><!-- home-game-list -->
+
                         <div class="home-hot">
                             <div class="home-common-header">
                                 <h2 class="title">人气热销</h2>
                             </div> <!-- home-common-header -->
+
                             <div class="home-hot-main clean">
                                 <div class="left-main fl">
                                     <img src="images/ia_100000084.jpg" alt="主图">
@@ -176,7 +277,7 @@
                                     <img src="images/ia_100000088.jpg" alt="辅图">
                                     <a href="http://bmall.163.com/bmall/detail/3838009/0">魔兽世界 吉安娜魔法阵无线充电器</a>
                                 </div>
-                            </div>
+                            </div> <!-- home-hot-main -->
                         </div> <!-- home-hot -->
                         <div class="home-new">
 
@@ -184,27 +285,31 @@
                                 <h2 class="title">最新周边</h2>
                             </div> <!-- home-common-header -->
 
-                            <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                            <div class="swiper-container swiper-container-initialized swiper-container-horizontal fix-width">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide swiper-no-swiping swiper-slide-active">
-                                        <img src="images/ia_100000089.jpg" alt="">
+                                    <div class="swiper-slide swiper-slide-active" style="width: 260px;margin-right: 30px;">
+                                        <img src="images/守望先锋飞镖冰箱贴260x360.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide swiper-no-swiping swiper-slide-next">
-                                        <img src="images/ia_100000091.jpg" alt="">
+                                    <div class="swiper-slide swiper-slide-next" style="width: 260px;margin-right: 30px;">
+                                        <img src="images/260x360.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide swiper-no-swiping">
-                                        <img src="images/ia_100000093.jpg" alt="">
+                                    <div class="swiper-slide" style="width: 260px;margin-right: 30px;">
+                                        <img src="images/官网banner260x360.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide swiper-no-swiping">
-                                        <img src="images/ia_100000095.jpg" alt="">
+                                    <div class="swiper-slide" style="width: 260px;margin-right: 30px;">
+                                        <img src="images/banner260_360.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide" style="width: 260px;margin-right: 30px;">
+                                        <img src="images/炉石传说_艺术设定集260x360banner.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
-                                    aria-disabled="false"></div>
-                                <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
-                                    aria-disabled="true"></div>
+                                <div class="swiper-button-prev"></div>
+                                <!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+                                <div class="swiper-button-next"></div>
+                                <!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
                                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                             </div><!--  swiper -->
+
                         </div> <!-- home-new -->
 
                         <div class="floors">
@@ -801,34 +906,7 @@
                     </div> <!-- 中间内容 fix-width -->
                 </div> <!-- home 中间内容 -->
                 <div class="body-bottom-container">
-                    <div class="fix-width">
-
-                        <div class="section section-left fl">
-                            <p class="section-title">客户服务</p>
-                            <span class="client-service">在线客服</span class="client-service">
-                            <span class="client-feedback">用户反馈</span class="client-service">
-                        </div>
-                        <div class="section section-mid fl">
-                            <p class="section-title">网易暴雪周边商城</p>
-                            <p class="section-content">是网易旗下运营暴雪游戏周边产品的官网购物商场。秉承网易一贯的严谨态度，力求帮消费者引进、设计、制造优质的暴雪周边产品</p>
-                            <p class="contacts">
-                                <span>关注我们</span>
-                                <img class="wechat" src="images/gmOyayaNqHsAAAAASUVORK5CYII_.png" alt="">
-                                <img class="microblog" src="images/gNPdcN0wd8G7wAAAABJRU5ErkJggg__.png" alt="">
-                            </p>
-                            <div class="code-board hidden fl">
-
-                                <div class="mask"></div>
-                                <div class="angle"></div>
-                                <img src="images/wechat_qrcode.28e9e58c.png" alt="">
-
-                            </div>
-                        </div>
-                        <div class="section section-right">
-                            <img class="net-ease" src="images/net_ease_logo_home.e8b499d1.png" alt="">
-                            <img class="baoxue" src="images/wAAAABJRU5ErkJggg__.png" alt="">
-                        </div>
-                    </div>
+                   
                 </div> <!-- body-bottom-container -->
             </div><!-- main-container -->
 
@@ -836,9 +914,10 @@
 
         </div><!-- app-container -->
     </div>
-    <script src="js/jquery-1.11.3.min.js"></script>
+    
     <script src="js/swiper.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/topNav.js"></script>
     <script>
         $(document).ready(function () {
             var mySwiper = new Swiper('.swiper-container', {
@@ -855,6 +934,8 @@
 
             $("#header").load("html/header.html"); /* 公共头部 */
             $("#footer").load("html/footer.html"); /* 公共页脚 */
+            $(".body-bottom-container").load("html/body-bottom.html");
+            
         });
     </script>
 </body>

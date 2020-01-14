@@ -1,0 +1,30 @@
+.app-container {
+    & .main-container {
+        background: #fff url(../images/shop-container-bg.png) no-repeat fixed 0 0;
+        background-size: cover;
+
+        & .shop-show {
+            margin-bottom: 100px;
+
+            & .prodBox {
+                position: relative;
+                box-sizing: border-box;
+
+                & .prodList {
+                    margin: 28px 0 50px;
+
+                    & li {
+                        width: 260px;
+                        height: 300px;
+                        border: 1px solid #e8e8e8;
+                        margin-right: 16px;
+                        margin-bottom: 16px;
+                        background: #fff;
+                        position: relative;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

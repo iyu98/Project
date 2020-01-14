@@ -32,13 +32,19 @@ gulp.task("copyHtml", function () {
     // pipe()   处理找到的问文件
     // gulp.dest()  把处理好的文件放到指定位置
     gulp.src("*.html").pipe(gulp.dest("dist")).pipe(connect.reload());
-    gulp.src("html/*.html").pipe(gulp.dest("dist/html")).pipe(connect.reload());
+    // gulp.src("html/*.html").pipe(gulp.dest("dist/html")).pipe(connect.reload());
 });
 
+gulp.task("copyHtmls",function(){
+    gulp.src("html/*.html").pipe(gulp.dest("dist/html")).pipe(connect.reload());
+
+})
+
 // gulp copy 图片
-gulp.task("copyImg", function () {
-    gulp.src("*.jpg").pipe(gulp.dest("dist/img"));
-});
+// gulp.task("copyImg", function () {
+//     gulp.src("*.jpg").pipe(gulp.dest("dist/img"));
+// });
+
 // copy2319 jpg png 格式的图片
 // gulp.task("copyImgAll",function(){
 //     gulp.src("*.{jpg,png}").pipe(gulp.dest("dist/img"));
@@ -66,7 +72,7 @@ gulp.task("build", ["copyHtml", "copyImgAll", "copyData","copyScript"]);
 
 // 监听  事实监听文件改动，本地修改服务器也会修改
 gulp.task("watch", function () {
-    gulp.watch(["sass/*.scss", "*.html", "js/*.js", "json/*.json"], ["sass", "copyHtml", "copyScript", "copyData"]);
+    gulp.watch(["sass/*.scss", "*.html", "js/*.js", "json/*.json", "html/*.html"], ["sass", "copyHtml", "copyScript", "copyData", "copyHtmls"]);
 });
 
 //  livereload: true 实施加载

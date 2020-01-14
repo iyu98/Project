@@ -1,0 +1,76 @@
+{
+    "rx": [
+        {
+            "id": 10001,
+            "name": "预售 魔兽世界编年史同人画集 时光之沙漏",
+            "img": "images/ia_100000084.jpg",
+            "url": "http://bmall.163.com/bmall/detail/6191128001/0"
+        },
+        {
+            "id": 10002,
+            "name": "守望先锋 英雄集合鼠标垫（新版）",
+            "img": "images/100012.jpg",
+            "url": "http://bmall.163.com/bmall/detail/3838009/0"
+        },
+        {
+            "id": 10003,
+            "name": "破坏求 毛绒抱枕 守望先锋",
+            "img": "images/ia_100000086.jpg",
+            "url": "http://bmall.163.com/bmall/detail/3838009/0"
+        },
+        {
+            "id": 10004,
+            "name": "魔兽世界 艾泽拉斯新春红包套装",
+            "img": "images/ia_100000087.jpg",
+            "url": "http://bmall.163.com/bmall/detail/3838009/0"
+        },
+        {
+            "id": 10005,
+            "name": "魔兽世界 吉安娜魔法阵无线充电器",
+            "img": "images/ia_100000088.jpg",
+            "url": "http://bmall.163.com/bmall/detail/3838009/0"
+        }
+    ],
+    "zb": [
+        {
+            "id": 10006,
+            "img": "images/守望先锋飞镖冰箱贴260x360.jpg",
+            "minImg": "images/6.jpg",
+            "name": "守望先锋 源氏飞镖冰箱贴",
+            "title": "是时候展现英雄真正实力",
+            "price": 427
+        },
+        {
+            "id": 10007,
+            "img": "images/260x360.jpg",
+            "minImg": "images/6.jpg",
+            "name": "守望先锋 D.Va可爱人偶 手办模型",
+            "title": "D.Va爱你哟",
+            "price": 268
+        },
+        {
+            "id": 10008,
+            "img": "images/官网banner260x360.jpg",
+            "minImg": "images/6.jpg",
+            "name": "守望先锋 禅雅塔可动人偶手办",
+            "title": "本我不拘于形",
+            "price": 427
+        },
+        {
+            "id": 10009,
+            "img": "images/炉石传说_艺术设定集260x360banner.jpg",
+            "minImg": "images/5.jpg",
+            "name": "炉石传说 艺术设定集",
+            "title": "谁想来一场华丽的冒险？",
+            "price": 268
+        },
+        {
+            "id": 10010,
+            "img": "images/banner260_360.jpg",
+            "minImg": "images/1.jpg",
+            "name": "魔兽世界 阵营收纳包",
+            "title": "收纳装备，无惧冒险",
+            "price": 268
+        }
+    ]
+}
