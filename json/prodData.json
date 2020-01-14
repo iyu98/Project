@@ -1,0 +1,245 @@
+{
+    "home":[
+        {
+            "id": 10001,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_001.jpg",
+            "prodInfo": "炉石传说 经典Logo颈枕",
+            "prodDesc": "伴你冒险旅途",
+            "priceLabel": "商城价",
+            "price": 85.00,
+            "prodNum": 1
+        },
+        {
+            "id": 10002,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_002.jpg",
+            "prodInfo": "炉石传说 笔记本电脑防护包",
+            "prodDesc": "为笔记本增加护甲",
+            "priceLabel": "商城价",
+            "price": 85.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10003,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_003.jpg",
+            "prodInfo": "守望先锋 源氏茶杯",
+            "prodDesc": "和风茶杯，感受武神之道",
+            "priceLabel": "商城价",
+            "price": 49.00,
+            "prodNum": 1
+        },
+        {
+            "id": 10004,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_004.jpg",
+            "prodInfo": "守望先锋 艾什 帆布包",
+            "prodDesc": "想干这行，就得听我的！",
+            "priceLabel": "商城价",
+            "price": 98.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10005,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_005.jpg",
+            "prodInfo": "炉石酒馆盖毯 炉石传说",
+            "prodDesc": "天这么冷，快进来烤烤火吧！",
+            "priceLabel": "商城价",
+            "price": 139.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10006,
+            "inventory": 0,
+            "prodImg": "../images/jujia/pic_007.jpg",
+            "prodInfo": "守望先锋 D.Va拉杆箱 铝框（附赠行李牌+个性贴纸）",
+            "prodDesc": "为了联盟",
+            "priceLabel": "商城价",
+            "price": 120.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10007,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_006.jpg",
+            "prodInfo": "联盟全自动雨伞 魔兽世界",
+            "prodDesc": "这太imba了！",
+            "priceLabel": "商城价",
+            "price": 499.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10008,
+            "inventory": 0,
+            "prodImg": "../images/jujia/pic_008.jpg",
+            "prodInfo": "炉石传说 酒馆巧克力礼盒",
+            "prodDesc": "浓醇可可碰撞金色传说",
+            "priceLabel": "商城价",
+            "price": 59.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10009,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_009.jpg",
+            "prodInfo": "守望先锋 英雄巧克力礼盒",
+            "prodDesc": "守望先锋和醇黑巧克力的美妙融合",
+            "priceLabel": "商城价",
+            "price": 69.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10010,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_010.jpg",
+            "prodInfo": "破坏球 毛绒抱枕 守望先锋",
+            "prodDesc": "别把仓鼠惹毛了！",
+            "priceLabel": "商城价",
+            "price": 108.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10011,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_011.jpg",
+            "prodInfo": "炉石传说 旅店盒子收纳箱",
+            "prodDesc": "再也不担心“爆牌”啦",
+            "priceLabel": "商城价",
+            "price": 85.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10012,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_012.jpg",
+            "prodInfo": "炉石传说 经典卡背雨伞",
+            "prodDesc": "重温初入酒馆的美好时光",
+            "priceLabel": "商城价",
+            "price": 120.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10013,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_013.jpg",
+            "prodInfo": "联盟 马克杯 魔兽世界",
+            "prodDesc": "冒险途中与你相伴",
+            "priceLabel": "商城价",
+            "price": 69.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10014,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_014.jpg",
+            "prodInfo": "部落 马克杯 魔兽世界",
+            "prodDesc": "冒险途中与你相伴",
+            "priceLabel": "商城价",
+            "price": 69.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10015,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_015.jpg",
+            "prodInfo": "炉石传说 酒馆老板酒桶杯 新版",
+            "prodDesc": "欢迎来到我的酒馆，把酒迎欢乐开怀",
+            "priceLabel": "商城价",
+            "price": 198.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10016,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_016.jpg",
+            "prodInfo": "风暴英雄纸巾盒迪亚波罗",
+            "prodDesc": "个性美观的纸巾盒",
+            "priceLabel": "商城价",
+            "price": 68.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10017,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_017.jpg",
+            "prodInfo": "魔兽世界 部落联盟 阵营地垫",
+            "prodDesc": "进入奇妙的世界！",
+            "priceLabel": "商城价",
+            "price": 69.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10018,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_018.jpg",
+            "prodInfo": "魔兽世界 佩佩开瓶器 冰箱贴（多功能）",
+            "prodDesc": "“开启”夏日的每一份快乐",
+            "priceLabel": "商城价",
+            "price": 35.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10019,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_019.jpg",
+            "prodInfo": "守望先锋 洋葱小鱿开瓶器 冰箱贴（多功能）",
+            "prodDesc": "这个世界需要更多的小鱿！",
+            "priceLabel": "商城价",
+            "price": 35.00,
+            "prodNum": 0
+        },
+        {
+            "id": 10020,
+            "inventory": 999,
+            "prodImg": "../images/jujia/pic_020.jpg",
+            "prodInfo": "暴雪世界 地图盖毯 守望先锋",
+            "prodDesc": "进入奇妙的世界！",
+            "priceLabel": "商城价",
+            "price": 139.00,
+            "prodNum": 0
+        }
+    ]
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

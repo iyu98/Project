@@ -1,0 +1,226 @@
+.main-container {
+    background: #ffffff url(../images/dynamic_bg_1.88437802.png) no-repeat fixed 0 0;
+    background-size: cover;
+}
+
+
+.prod-content {
+    height: 500px;
+    margin-top: 20px;
+    background: #ffffff;
+    margin-bottom: 60px;
+    
+    & .prod-details {
+        width: 100%;
+
+        & .prodImg {
+            width: 500px;
+            height: 500px;
+            padding-top: 30px;
+
+            & .images {
+                width: 400px;
+
+                & img {
+                    width: 380px;
+                    height: 380px;
+                }
+            }
+            
+            & .smallImages {
+                width: 85px;
+
+                & .imageMenu {
+                    height: 410px;
+                    overflow: hidden;
+
+                    & li {
+                        width: 72px;
+                        height: 72px;
+                        border: 1px solid #efefef;
+                        margin-bottom: 10px;
+
+                        &:hover {
+                            border: 1px solid #00aeff;
+                        }
+
+                        & img {
+                            width: 70px;
+                            height: 70px;
+                            background: #f4f4f4;
+                        }
+                    }
+                }
+            }
+        }
+
+        .infoDev {
+            padding: 5px 0;
+        }
+
+
+        & .prodInfo {
+            width: 500px;
+            margin-left: 50px;
+
+            & .desc {
+                border-bottom: 1px dashed #efefef;
+                margin-bottom: 20px;
+
+                & .name {
+                    font-size: 20px;
+                    font-weight: 700px;
+                }
+
+                & .title {
+                    color: #999999;
+                }
+
+
+                & .sale {
+                    background-color: #f5f6f6;
+                    margin: 10px 0;
+                    padding-left: 10px;
+                    color: #999999;
+                    display: inline-block;
+
+                    & .infoDev {
+                        & .price {
+                            color: red;
+
+                            & .price-rmb {
+                                font-size: 16px;
+                            }
+
+                            & .price-num {
+                                font-size: 26px;
+                            }
+                        }
+                    }
+
+                    & .service {
+                        & .label-div {
+                            width: 50px;
+
+                            & .label {
+                                width: 55px;
+                                font-size: 13px;
+                            }
+                        }
+
+                        & .services {
+                            line-height: 20px;
+                            float: left;
+                            width: 430px;
+                            cursor: pointer;
+
+                            & .serviceItem {
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            & .specLabel {
+                width: 60px;
+                float: left;
+                padding-top: 10px;
+            }
+
+            & .spacBlocks {
+                width: 430px;
+                float: left;
+
+                & .number-input {
+                    display: table-cell;
+                    padding: 5px 0 0 11px;
+                    overflow: hidden;
+                    vertical-align: top;
+
+                    & .number {
+                        position: relative;
+
+                        & .oper {
+                            display: block;
+                            float: left;
+                            width: 26px;
+                            height: 30px;
+                            line-height: 30px;
+                            padding: 0;
+                            text-align: center;
+                            background: #ededed;
+                            overflow: hidden;
+                            color: #777;
+
+                            & .minus {
+                                background: url(../images/minus.png) 50% no-repeat;
+                                height: 28px;
+                                width: 25px;
+                                display: inline-block;
+                                font-size: 26px;
+                                padding-top: 2px;
+                                font-style: normal;
+                            }
+                            & .plus {
+                                @extend .minus;
+                                background: url(../images/plus.png) 50% no-repeat;
+                            }
+                        }
+
+                        & .text {
+                            float: left;
+                            margin: 0;
+                            padding: 0;
+                            width: 48px;
+                            height: 30px;
+                            font-size: 16px;
+                            line-height: 30px;
+                            text-align: center;
+                            color: #777777;
+                            outline: 0;
+                            background: #ffffff;
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                margin-top: 10px;
+
+                & .disableBtn {
+                    cursor: not-allowed;
+                    background-color: #e1e1e1;
+                    color: #878787;
+                    height: 40px;
+                    width: 168px;
+                    font-size: 18px;
+                    line-height: 40px;
+                    display: inline-block;
+                    text-align: center;
+                    margin-right: 20px;
+                    border-radius: 3px;
+                    border: 0;
+                }
+
+                & .addBtn1 {
+                    background: #ffffff;
+                    color: #00aeff;
+                    border: 1px solid #00aeff;
+                    height: 40px;
+                    width: 168px;
+                    font-size: 18px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 3px;
+                }
+            }
+
+        }
+
+
+
+    }
+}

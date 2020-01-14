@@ -23,84 +23,96 @@
             <div class="header-container" id="header"></div> <!-- common-header -->
 
             <div class="main-container"">
-                <div class="fixed-top" id="fixed-top-nav">
-                    <div class="fixed-top-container fix-width">
-                        <div class="banner"></div>
-                        <div class="category" id="top-category">
+                <div class=" fixed-top" id="fixed-top-nav">
+                <div class="fixed-top-container fix-width">
+                    <div class="banner"></div>
+                    <div class="category" id="top-category">
 
-                        </div><!-- top-category -->
-                        <div class="search" id="top-search">
-                            <img src="images/header-search.png" alt="">
-                            <div class="search-input" style="display: none;">
-                                <span class="top-hide">>></span>
-                                <input placeholder="请输入搜索内容" value>
-                            </div>
-                        </div>
-                        <div class="user">
-                            <ul class="menu-list">
-                                <li>登录</li>
-                                <li>注册</li>
-                            </ul>
-                        </div>
-                        <div class="cart">
-                            <span>0</span>
+                    </div><!-- top-category -->
+                    <div class="search" id="top-search">
+                        <img src="images/header-search.png" alt="">
+                        <div class="search-input" style="display: none;">
+                            <span class="top-hide">>></span>
+                            <input placeholder="请输入搜索内容" value>
                         </div>
                     </div>
-                </div><!-- 顶部固定导航 -->
-
-                <div class="category-container font-12" id="shop-fenlei-nav">
-                    <div class="mask">
-                        <div class="fix-width">
-                            <div class="category" id="nav-category">
-
-                            </div> <!-- nav-category -->
-
-                        </div>
-                    </div>
-                </div><!-- 分类导航 -->
-
-                <div class="shop-show fix-width">
-
-                    <div class="prodBox">
-
-                        <ul class="prodList">
-                            <li>
-                                <span class="sold-out">已售完</span>
-                                <img src="../images/jujia/pic_001.jpg" alt="">
-                            </li>
-                            <li>
-                                <span class="sold-out">已售完</span>
-                                <img src="../images/jujia/pic_002.jpg" alt="">
-                            </li>
+                    <div class="user">
+                        <ul class="menu-list">
+                            <li>登录</li>
+                            <li>注册</li>
                         </ul>
+                    </div>
+                    <div class="cart">
+                        <span>0</span>
+                    </div>
+                </div>
+            </div><!-- 顶部固定导航 -->
+
+            <div class="category-container font-12" id="shop-fenlei-nav">
+                <div class="mask">
+                    <div class="fix-width">
+                        <div class="category" id="nav-category">
+
+                        </div> <!-- nav-category -->
 
                     </div>
-                    
                 </div>
+            </div><!-- 分类导航 -->
 
+            <div class="shop-show fix-width">
+                <div class="prodBox">
+                    <ul class="prodList" id="prodList">
+                    </ul>
+                </div>
+            </div>
 
-                <div class="body-bottom-container">
-                </div> <!-- body-bottom-container -->
-            </div><!-- main-container -->
-            <script>
-                window.onload = function () {
-                    function navCategory(id) {
-                        $(id).children().children().hover(function () {
-                            $(this).children("div").show().end().children("span").children("span").show()
-                        }, function () {
-                            $(this).children("div").hide().end().children("span").children("span").hide();
-                        });
-                    }
-                    navCategory("#top-category");
-                    navCategory("#nav-category");
-
+            <div class="body-bottom-container">
+            </div> <!-- body-bottom-container -->
+        </div><!-- main-container -->
+        <script>
+            window.onload = function () {
+                function navCategory(id) {
+                    $(id).children().children().hover(function () {
+                        $(this).children("div").show().end().children("span").children("span").show()
+                    }, function () {
+                        $(this).children("div").hide().end().children("span").children("span").hide();
+                    });
                 }
-            </script>
-            <div id="footer"></div> <!-- common-footer -->
-        </div>
-    </div>
+                navCategory("#top-category");
+                navCategory("#nav-category");
 
+                $(".section .net-ease").attr("src","../images/net_ease_logo_black.png")
+
+                $("#prodList").children().each(function () {
+                    $(this).on("click", "img, .prod-info, price-info", function () {
+                        window.location.href = `html/detail.html?id=${$(this).parent().children(".addShopBtn").attr("data-id")}`
+                    })
+                });
+
+                $.each($(".addShopBtn"), function (i, val) { 
+                    $(".addShopBtn").eq(i).click(function(){
+                        let id = $(this).attr("data-id");
+
+                        $.ajax({
+                            type: "get",
+                            url: "../data/prodData.json",
+                            dataType: "json",
+                            success: function (data) {
+                                $.each(data.home, function () { 
+                                    
+                                });
+                            }
+                        });
+
+                    })
+                });
+            }
+        </script>
+        <div id="footer"></div> <!-- common-footer -->
+    </div>
+    </div>
     <script src="../js/topNav.js"></script>
+    <script src="../js/prodData.js"></script>
     <script type="text/javascript">
         $(function () {
             $("#header").load("html/header.html");

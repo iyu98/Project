@@ -33,21 +33,8 @@ window.onload = function () {
         $(document).scrollTop(0)
     })
 
-    /* home-hot-main */
-    $.ajax({
-        url: "http://localhost:3000/rx",
-        type: "get",
-        dataType: "json",
-        success: function (data) {
 
-        }
-    })
-
-
-
-    /**
-     * swiper
-     */
+    /* swiper */
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 4,
         spaceBetween: 15,

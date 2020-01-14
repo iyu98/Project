@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/shoping.css">
+    <link rel="stylesheet" href="css/detail.css">
     <link rel="stylesheet" href="css/common-header.css">
     <link rel="stylesheet" href="css/common-footer.css">
 </head>
@@ -21,14 +21,11 @@
     <div id="root">
         <div class="app-container">
             <div class="header-container" id="header"></div> <!-- common-header -->
-
             <div class="main-container"">
                 <div class=" fixed-top" id="fixed-top-nav">
                 <div class="fixed-top-container fix-width">
                     <div class="banner"></div>
-                    <div class="category" id="top-category">
-
-                    </div><!-- top-category -->
+                    <div class="category" id="top-category"> </div><!-- top-category -->
                     <div class="search" id="top-search">
                         <img src="images/header-search.png" alt="">
                         <div class="search-input" style="display: none;">
@@ -47,27 +44,18 @@
                     </div>
                 </div>
             </div><!-- 顶部固定导航 -->
-
             <div class="category-container font-12" id="shop-fenlei-nav">
                 <div class="mask">
                     <div class="fix-width">
                         <div class="category" id="nav-category">
-
+                            <div class="images">
+                            </div>
                         </div> <!-- nav-category -->
-
                     </div>
-                </div>
+                </div><!-- mask -->
             </div><!-- 分类导航 -->
-
-            <div class="shop-show fix-width">
-                <div class="prodBox">
-                    <ul class="prodList" id="prodList">
-                    </ul>
-                </div>
-            </div>
-
-            <div class="body-bottom-container">
-            </div> <!-- body-bottom-container -->
+            <div class="prod-content fix-width" id="prod-content"></div><!-- prod-content -->
+            <div class="body-bottom-container"></div> <!-- body-bottom-container -->
         </div><!-- main-container -->
         <script>
             window.onload = function () {
@@ -81,38 +69,21 @@
                 navCategory("#top-category");
                 navCategory("#nav-category");
 
-                $(".section .net-ease").attr("src","../images/net_ease_logo_black.png")
-
-                $("#prodList").children().each(function () {
-                    $(this).on("click", "img, .prod-info, price-info", function () {
-                        window.location.href = `html/detail.html?id=${$(this).parent().children(".addShopBtn").attr("data-id")}`
+                function jjHref(id) {
+                    $(id).children().children().eq(1).click(function () {
+                        window.location.href = "html/shoping.html"
                     })
-                });
-
-                $.each($(".addShopBtn"), function (i, val) { 
-                    $(".addShopBtn").eq(i).click(function(){
-                        let id = $(this).attr("data-id");
-
-                        $.ajax({
-                            type: "get",
-                            url: "../data/prodData.json",
-                            dataType: "json",
-                            success: function (data) {
-                                $.each(data.home, function () { 
-                                    
-                                });
-                            }
-                        });
-
-                    })
-                });
+                }
+                jjHref("#top-category");
+                jjHref("#nav-category");
             }
         </script>
         <div id="footer"></div> <!-- common-footer -->
     </div>
     </div>
     <script src="../js/topNav.js"></script>
-    <script src="../js/prodData.js"></script>
+    <script src="../js/detail.js"></script>
+
     <script type="text/javascript">
         $(function () {
             $("#header").load("html/header.html");

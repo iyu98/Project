@@ -1,0 +1,157 @@
+.main-container {
+    background: #ffffff url(../images/dynamic_bg_1.88437802.png) fixed no-repeat 0 0;
+    background-size: cover;
+}
+
+.shopping-wrap {
+    height: 500px;
+
+    & table tr th, & table tr td {
+        padding: 15px 0;
+        font-weight: 400px;
+    }
+    
+    & table thead tr {
+        background: #f8f8f8;
+    }
+}
+
+.cart-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 1px solid #d8d8d8;
+    font-size: 14px;
+    background: #ffffff;
+
+    & .check {
+        width: 54px;
+        padding-left: 20px;
+        text-align: right;
+    }
+    & .check-all {
+        width: 50px;
+    }
+
+    & .batch-op {
+        text-align: left;
+        padding-left: 25px;
+
+        & a {
+            color: #00aeff;
+            margin-left: 60px;
+        }
+    }
+
+    & .total-price {
+        text-align: right;
+        padding-right: 30px;
+
+        & strong {
+            padding-left: 10px;
+            color: #e60012;
+            font-size: 24px;
+        }
+    }
+
+    & .submit {
+        text-align: center;
+        & .submitBtn {
+            margin-right: 0;
+            color: #ffffff;
+            background: #00aeff;
+            border: 0;
+            font-size: 16px;
+            padding: 12px 35px;
+        }
+    }
+}
+
+.prod-info {
+    & p {
+        text-align: left;
+        text-indent: 20px;
+    }
+}
+
+.prod-price {
+    width: 100px;
+    color: #333333;
+    text-align: center;
+}
+
+.prod-img {
+    width: 75px;
+    text-align: left;
+    position: relative;
+
+    & img {
+        height: 75px;
+        border: 1px solid #eee;
+        cursor: pointer;
+        width: 75px;
+    }
+}
+
+.number-input {
+    text-align: center;
+    padding: 5px 0 0 11px;
+    overflow: hidden;
+    vertical-align: top;
+
+    & .number {
+        position: relative;
+
+        & .oper {
+            display: block;
+            float: left;
+            width: 26px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0;
+            text-align: center;
+            background: #ededed;
+            overflow: hidden;
+            color: #777;
+
+            & .minus {
+                background: url(../images/minus.png) 50% no-repeat;
+                height: 28px;
+                width: 25px;
+                display: inline-block;
+                font-size: 26px;
+                padding-top: 2px;
+                font-style: normal;
+            }
+
+            & .plus {
+                @extend .minus;
+                background: url(../images/plus.png) 50% no-repeat;
+            }
+        }
+
+        & .text {
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 48px;
+            height: 30px;
+            font-size: 16px;
+            line-height: 30px;
+            text-align: center;
+            color: #777777;
+            outline: 0;
+            background: #ffffff;
+            border: none;
+        }
+    }
+}
+
+.promotion {
+    width: 150px;
+}
+
+.remove {
+    width: 60px;
+    cursor: pointer;
+}

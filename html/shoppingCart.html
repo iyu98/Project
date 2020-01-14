@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <base href="/">
+    <link rel="icon" href="images/icon-logo.ico">
+    <title>网易暴雪周边商城_中国唯一授权官方商城_魔兽世界_星际争霸2_暗黑3产品</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/shoppingCart.css">
+    <link rel="stylesheet" href="css/common-header.css">
+    <link rel="stylesheet" href="css/common-footer.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="app-container">
+            <div class="header-container" id="header"></div> <!-- common-header -->
+            <div class="main-container"">
+                <div class=" fixed-top" id="fixed-top-nav">
+                <div class="fixed-top-container fix-width">
+                    <div class="banner"></div>
+                    <div class="category" id="top-category"> </div><!-- top-category -->
+                    <div class="search" id="top-search">
+                        <img src="images/header-search.png" alt="">
+                        <div class="search-input" style="display: none;">
+                            <span class="top-hide">>></span>
+                            <input placeholder="请输入搜索内容" value>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <ul class="menu-list">
+                            <li>登录</li>
+                            <li>注册</li>
+                        </ul>
+                    </div>
+                    <div class="cart">
+                        <span>0</span>
+                    </div>
+                </div>
+            </div><!-- 顶部固定导航 -->
+            <div class="category-container font-12" id="shop-fenlei-nav">
+                <div class="mask">
+                    <div class="fix-width">
+                        <div class="category" id="nav-category">
+                            <div class="images">
+                            </div>
+                        </div> <!-- nav-category -->
+                    </div>
+                </div><!-- mask -->
+            </div><!-- 分类导航 -->
+
+            <div class="shopping-wrap fix-width">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th class="check">
+                                <input type="checkbox" id="checkAll">
+                            </th>
+                            <th class="check-all">全选</th>
+                            <th colspan="2">商品信息</th>
+                            <th>单价</th>
+                            <th>数量</th>
+                            <th>小计</th>
+                            <th>活动</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartList">
+                        
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td colspan="1" class="check">
+                                <input type="checkbox" id="checkAll">
+                            </td>
+                            <td colspan="4" class="batch-op">
+                                全选
+                                <a href="javascript:void(0)">批量删除</a>
+                            </td>
+                            <td colspan="2" class="total-price">
+                                <span class="label">商品合计:<strong></strong></span>
+                            </td>
+                            <td colspan="2" class="submit">
+                                <button class="submitBtn">提交订单</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="body-bottom-container"></div> <!-- body-bottom-container -->
+        </div><!-- main-container -->
+        
+        <div id="footer"></div> <!-- common-footer -->
+    </div>
+    </div>
+    <script src="../js/topNav.js"></script>
+    <script src="../js/detail.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            function navCategory(id) {
+                $(id).children().children().hover(function () {
+                    $(this).children("div").show().end().children("span").children("span").show()
+                }, function () {
+                    $(this).children("div").hide().end().children("span").children("span").hide();
+                });
+            }
+            navCategory("#top-category");
+            navCategory("#nav-category");
+            
+            $(".section .net-ease").attr("src","../images/net_ease_logo_black.png")
+
+        }
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $("#header").load("html/header.html");
+            $("#footer").load("html/footer.html");
+            $(".body-bottom-container").load("html/body-bottom.html");
+
+            $.ajax({
+                type: "get",
+                url: "../data/prodData.json",
+                dataType: "json",
+                success: function (data) {
+                    let str = "";
+                    $.each(data.home, function (i, value) {
+                        if (data.home[i].prodNum > 0) {
+                            str += `
+                            <tr>
+                            <td class="check">
+                                <input type="checkbox">
+                            </td>
+                            <td class="check"></td>
+                            <td class="prod-img">
+                                <img src="${data.home[i].prodImg}" alt="">
+                            </td>
+                            <td class="prod-info">
+                                <p>${data.home[i].prodInfo}</p>
+                            </td>
+                            <td class="prod-price">
+                                <p class="price">￥ ${data.home[i].price}</p>
+                            </td>
+                            <td class="prod-num">
+                                <div class="number-input">
+                                    <span class="number">
+                                        <a href="javascript:void(0)" class="oper oper-munus">
+                                            <i class="fa minus"></i>
+                                        </a>
+                                        <input type="text" id="numText" class="text" value="1">
+                                        <a href="javascript:void(0)" class="oper oper-plus">
+                                            <i class="fa plus"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="totalPrice"></td>
+                            <td class="promotion"></td>
+                            <td class="remove" data-id="${data.home[i].id}">
+                                <img id="remove" src="../images/lajitong.png" alt="">
+                            </td>
+                        </tr>
+                            `;
+                        }
+                    });
+                    $("#cartList").html(str);
+                }
+            });
+
+        })
+    </script>
+</body>
+
+</html>
