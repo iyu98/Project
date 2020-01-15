@@ -6,7 +6,12 @@ window.onload = function () {
     })
     $("#hasSubMenu .sub-menu li").eq(1).click(function () {
         window.open("http://iii67.cn/mwgmav", "", "height=643, width=604,top=80, left=500,z-look=yes");
-    })
+    });
+
+    $(".icon-cart, #cart").on("click",function () {
+        window.location.href = "http://localhost:8080/html/shoppingCart.html";
+    });
+
 
     function navCategory(id) {
         $(id).children().children().hover(function () {
@@ -25,7 +30,8 @@ window.onload = function () {
     }
     jjHref("#top-category");
     jjHref("#nav-category");
-
+    
+    commonCartNum();
 
 
     /* Go to top */

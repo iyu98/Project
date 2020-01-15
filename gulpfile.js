@@ -93,7 +93,7 @@ gulp.task("default", ["server", "watch", "sass", "babel"]);
 gulp.task("sass", function () {
     gulp.src("sass/*.scss")
         .pipe(sourcemaps.init())
-        .pipe(sass({ outputStyle: 'compact' }))
+        .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest("dist/css"))
 })

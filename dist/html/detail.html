@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="../js/jquery-1.11.3.min.js"></script>
-    <base href="/">
     <link rel="icon" href="images/icon-logo.ico">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/topNav.js"></script>
+    <script src="../js/detail.js"></script>
+    <script src="../js/common.js"></script>
+    <base href="/">
     <title>网易暴雪周边商城_中国唯一授权官方商城_魔兽世界_星际争霸2_暗黑3产品</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/detail.css">
-    <link rel="stylesheet" href="css/common-header.css">
-    <link rel="stylesheet" href="css/common-footer.css">
 </head>
 
 <body>
@@ -57,32 +56,76 @@
             <div class="prod-content fix-width" id="prod-content"></div><!-- prod-content -->
             <div class="body-bottom-container"></div> <!-- body-bottom-container -->
         </div><!-- main-container -->
-        <script>
-            window.onload = function () {
-                function navCategory(id) {
-                    $(id).children().children().hover(function () {
-                        $(this).children("div").show().end().children("span").children("span").show()
-                    }, function () {
-                        $(this).children("div").hide().end().children("span").children("span").hide();
-                    });
-                }
-                navCategory("#top-category");
-                navCategory("#nav-category");
-
-                function jjHref(id) {
-                    $(id).children().children().eq(1).click(function () {
-                        window.location.href = "html/shoping.html"
-                    })
-                }
-                jjHref("#top-category");
-                jjHref("#nav-category");
-            }
-        </script>
+        
         <div id="footer"></div> <!-- common-footer -->
     </div>
     </div>
-    <script src="../js/topNav.js"></script>
-    <script src="../js/detail.js"></script>
+    
+    <script>
+        window.onload = function () {
+            function navCategory(id) {
+                $(id).children().children().hover(function () {
+                    $(this).children("div").show().end().children("span").children("span").show()
+                }, function () {
+                    $(this).children("div").hide().end().children("span").children("span").hide();
+                });
+            }
+            navCategory("#top-category");
+            navCategory("#nav-category");
+
+            function jjHref(id) {
+                $(id).children().children().eq(1).click(function () {
+                    window.location.href = "html/shoping.html"
+                })
+            }
+            jjHref("#nav-category");
+
+            commonCartNum();
+
+            // $("#numText").attr("readonly","readonly");
+            function value(minus,plus,text) {
+                var val = $(text).val();
+                $(minus).eq(0).click(function(){
+                    if(val == 1) {
+                        val = 1;
+                    } else {
+                        val--;
+                    }
+                    $(text).val(val);
+                })
+                $(plus).click(function(){
+                    val++;
+                    $(text).val(val);
+                });
+            }
+
+            value(".oper-munus",".oper-plus","#numText");
+
+            $(".addBtn1").eq(0).click(function () {
+                let id = $(this).attr("data-id");
+                $.ajax({
+                    type: "get",
+                    url: "http://localhost:3000/home/"+id,
+                    dataType: "json",
+                    success: function (data) {
+                        let num = data.prodNum;
+                        if(data.inventory == 0) {
+                            num = 0;
+                        } else {
+                            num++;
+                        }
+                        $.ajax({
+                            type: "patch",
+                            url: "http://localhost:3000/home/"+id,
+                            data: {"prodNum":num},
+                            dataType: "json"
+                        });
+                    }
+                });
+            })
+
+        }
+    </script>
 
     <script type="text/javascript">
         $(function () {
