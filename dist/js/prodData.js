@@ -2,40 +2,40 @@ $(function () {
 
     $.ajax({
         type: "get",
-        url: "../data/prodData.json",
+        url: "http://localhost:3000/home",
         dataType: "json",
         success: function (data) {
             let str = "";
-            for (let i = 0; i < data.home.length; i++) {
-                if(data.home[i].inventory !== 0) {
+            for (let i = 0; i < data.length; i++) {
+                if(data[i].inventory !== 0) {
                     str += `
                     <li>
-                        <img src="${data.home[i].prodImg}" alt="">
-                        <span class="prod-info">${data.home[i].prodInfo}</span>
+                        <img src="${data[i].prodImg}" alt="">
+                        <span class="prod-info">${data[i].prodInfo}</span>
                         <span class="price-info">
-                            <span class="label">${data.home[i].priceLabel}</span>
+                            <span class="label">${data[i].priceLabel}</span>
                             <span class="price">
                             ￥
-                            ${data.home[i].price}
+                            ${data[i].price}
                             </span>
                         </span>
-                        <input type="button" class="addShopBtn" data-id="${data.home[i].id}" value="加入购物车">
+                        <input type="button" class="addShopBtn" data-id="${data[i].id}" value="加入购物车">
                     </li>
                     `;
                 } else {
                     str += `
                     <li>
                         <span class="sold-out">已售完</span>
-                        <img src="${data.home[i].prodImg}" alt="">
-                        <span class="prod-info">${data.home[i].prodInfo}</span>
+                        <img src="${data[i].prodImg}" alt="">
+                        <span class="prod-info">${data[i].prodInfo}</span>
                         <span class="price-info">
-                            <span class="label">${data.home[i].priceLabel}</span>
+                            <span class="label">${data[i].priceLabel}</span>
                             <span class="price">
                             ￥
-                            ${data.home[i].price}
+                            ${data[i].price}
                             </span>
                         </span>
-                        <input type="button" class="addShopBtn" data-id="${data.home[i].id}" value="加入购物车">
+                        <input type="button" class="addShopBtn" data-id="${data[i].id}" value="加入购物车">
                     </li>
                     `;
                 }

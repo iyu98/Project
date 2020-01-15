@@ -2,6 +2,303 @@
 /* 头部公告 */
 /* 头部菜单 登录注册部分 */
 /* 顶部logo部分 */
+
+@charset "utf-8";
+
+// 盒子模型
+* {
+
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+// 根元素
+html {
+    font: 14px/1.5 "Microsoft YaHei";
+}
+
+body {
+    position: relative;
+    margin: 0;
+}
+
+/**********  根元素标签  结束**********/
+
+// 行内元素统一行块
+a,
+b,
+i,
+em,
+sub,
+sup,
+abbr,
+span,
+code,
+time,
+label,
+input,
+audio,
+small,
+video,
+button,
+select,
+canvas,
+strong,
+address,
+textarea,
+progress {
+    display: inline-block;
+}
+
+.display-block {
+    display: block;
+}
+
+// html5
+nav,
+main,
+menu,
+aside,
+figure,
+footer,
+header,
+hgroup,
+article,
+details,
+section,
+summary,
+figcaption {
+    display: block;
+}
+
+
+
+// 标题
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+pre {
+    margin: 0;
+}
+
+
+
+// 强调
+i,
+em,
+dfn,
+cite,
+address {
+    font-style: normal;
+}
+
+b,
+strong {
+    font-weight: inherit;
+}
+
+small {
+    font-size: inherit;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+// 上标、下标
+sub,
+sup {
+    line-height: 1;
+    font-size: 12px;
+}
+
+
+
+// 表单
+input,
+button,
+select,
+option,
+textarea {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    outline: none;
+    color: inherit;
+    font: inherit;
+}
+
+/* 分割线 */
+button,
+select,
+input[type="Date"],
+input[type="file"],
+input[type="reset"],
+input[type="radio"],
+input[type="color"],
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* 分割线 */
+legend,
+fieldset,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* 分割线 */
+input:disabled,
+button:disabled,
+select:disabled,
+textarea:disabled {
+    cursor: not-allowed;
+}
+
+
+
+// 列表
+dl,
+dd {
+    margin: 0;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+// 表格
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 0;
+    font-weight: normal;
+}
+
+
+
+// 链接、分割线、图片
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    border: none;
+    vertical-align: top;
+}
+
+hr {
+    margin: 0;
+}
+
+
+// 浮动、清除浮动
+@mixin clearFix {
+    &:after {
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+        font-size: 0;
+        content: "";
+    }
+}
+
+.clearfix {
+    @include clearFix;
+
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clean {
+    @include clearFix;
+}
+
+// 水平垂直都居中
+@mixin levelVerticalCenter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 超出省略号
+@mixin textEllipsis {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+html {
+    // 根据项目实际需求定制默认字体颜色
+    color: #333;
+
+    // 根据项目实际需求，限制页面大小，防止页面排版变形
+    body {
+        min-width: 1200px;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    // 隐藏元素
+    .hidden {
+        display: none;
+    }
+    // 手势标识不可点击
+    .disabled {
+        cursor: not-allowed !important;
+    }
+
+    // 对阿里字体图标稍作修改
+    .iconfont {
+        line-height: 1;
+        vertical-align: middle;
+        font-size: inherit;
+        font-style: normal;
+        color: inherit;
+    }
+}
+
 .font-12 {
     font-size: 12px;
 }
@@ -15,6 +312,153 @@ $min-width:1200px;
 
 .app-container {
     min-width: $min-width;
+}
+.header-container {
+    height: 180px;
+    background: #344a71 url(../images/headerbg.png) repeat;
+
+    .top-menu-container {
+        height: 30px;
+        line-height: 30px;
+        color: #7f93a9;
+        background: rgba(0, 0, 0, .2);
+    }
+}
+
+.top-header-notification {
+    height: 30px;
+    color: #00aeff;
+    margin-left: 15px;
+    padding-left: 20px;
+    overflow: hidden;
+    position: absolute;
+    background: url(../images/top-header-notification.png) no-repeat center;
+    background-position: 0 8px;
+
+    .inline-block {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.top-menu-list {
+    &>li {
+        height: 30px;
+        float: left;
+        cursor: pointer;
+        position: relative;
+    }
+
+    & .menu-item {
+        padding: 0 10px;
+        line-height: 14px;
+        border-right: 1px solid #7f93a9;
+    }
+
+    & .sub-menu {
+        display: none;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        background: rgba($color: #000000, $alpha: 0.5);
+        border: 1px solid #374254;
+        width: 100%;
+        z-index: 1002;
+        box-sizing: border-box;
+
+        & li {
+            text-align: center;
+            border-bottom: 1px solid #374254;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+
+            &:hover {
+                color: #dae4ef;
+            }
+
+            & a {
+                color: inherit;
+            }
+        }
+    }
+
+}
+
+.has-sub-menu {
+    padding-right: 10px;
+    background: url(../images/has-sub-menu.png) no-repeat 0 0;
+    background-size: 10px;
+    background-position: 100% 60%;
+    background-origin: content-box;
+
+    span {
+        padding-right: 14px;
+        cursor: auto;
+    }
+}
+
+.banner-container {
+    height: 150px;
+
+    img {
+        display: inline-block;
+    }
+
+    .header-logo {
+        height: 80px;
+        margin-top: 40px;
+        cursor: pointer;
+    }
+}
+
+.search-container {
+    padding-top: 65px;
+    margin-right: 60px;
+    position: relative;
+
+    input {
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #33669b;
+        color: #c9d8e6;
+        outline: none;
+        width: 250px;
+        padding: 0 10px;
+    }
+
+    .icon-search {
+        position: absolute;
+        height: 18px;
+        bottom: 8px;
+        cursor: pointer;
+    }
+
+    .icon-cart {
+        position: absolute;
+        height: 18px;
+        bottom: 8px;
+        cursor: pointer;
+    }
+}
+
+.icon-cart {
+    right: -60px;
+}
+
+.cart-count {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ed871d;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    right: -75px;
+    bottom: 18px;
 }
 
 
@@ -128,7 +572,6 @@ $min-width:1200px;
         background: inherit;
 
         &>div {
-            display: inline-block;
             height: 42px;
             float: left;
         }
@@ -874,6 +1317,73 @@ $min-width:1200px;
             height: 80px;
             top: 50px;
             left: 50px;
+        }
+    }
+}
+
+.footer-container {
+    height: 300px;
+    background: #1a1a1a;
+    color: #a6a6a6;
+    font-size: 12px;
+    text-align: center;
+    padding: 80px 0;
+    box-sizing: border-box;
+
+    & .promises-list {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #2c2c2c;
+        color: #fff;
+
+        & li {
+            height: 53px;
+            line-height: 51px;
+            padding-left: 80px;
+            margin-right: 80px;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        & li:last-child {
+            margin-right: 0;
+        }
+
+        @mixin promisesList($url) {
+            background: url($url) no-repeat 0 0;
+            background-size: contain;
+        }
+
+        & .official {
+            @include promisesList("../images/ia_100000135.png");
+        }
+
+        & .return {
+            @include promisesList("../images/ia_100000136.png");
+        }
+
+        & .shipment {
+            @include promisesList("../images/ia_100000137.png");
+        }
+
+        & .netease {
+            @include promisesList("../images/ia_100000138.png");
+        }
+    }
+
+    & .link-list {
+        padding: 15px 0 8px;
+
+        & li {
+            font-size: 12px;
+            padding: 0 20px;
+            border-right: 1px solid #fff;
+            height: 15px;
+            line-height: 15px;
+            display: inline-block;
+
+            &:last-child {
+                border-right: 0;
+            }
         }
     }
 }

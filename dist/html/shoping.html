@@ -9,12 +9,8 @@
     <base href="/">
     <link rel="icon" href="images/icon-logo.ico">
     <title>网易暴雪周边商城_中国唯一授权官方商城_魔兽世界_星际争霸2_暗黑3产品</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/shoping.css">
-    <link rel="stylesheet" href="css/common-header.css">
-    <link rel="stylesheet" href="css/common-footer.css">
 </head>
 
 <body>
@@ -42,7 +38,7 @@
                             <li>注册</li>
                         </ul>
                     </div>
-                    <div class="cart">
+                    <div class="cart" id="cart">
                         <span>0</span>
                     </div>
                 </div>
@@ -69,50 +65,18 @@
             <div class="body-bottom-container">
             </div> <!-- body-bottom-container -->
         </div><!-- main-container -->
-        <script>
-            window.onload = function () {
-                function navCategory(id) {
-                    $(id).children().children().hover(function () {
-                        $(this).children("div").show().end().children("span").children("span").show()
-                    }, function () {
-                        $(this).children("div").hide().end().children("span").children("span").hide();
-                    });
-                }
-                navCategory("#top-category");
-                navCategory("#nav-category");
-
-                $(".section .net-ease").attr("src","../images/net_ease_logo_black.png")
-
-                $("#prodList").children().each(function () {
-                    $(this).on("click", "img, .prod-info, price-info", function () {
-                        window.location.href = `html/detail.html?id=${$(this).parent().children(".addShopBtn").attr("data-id")}`
-                    })
-                });
-
-                $.each($(".addShopBtn"), function (i, val) { 
-                    $(".addShopBtn").eq(i).click(function(){
-                        let id = $(this).attr("data-id");
-
-                        $.ajax({
-                            type: "get",
-                            url: "../data/prodData.json",
-                            dataType: "json",
-                            success: function (data) {
-                                $.each(data.home, function () { 
-                                    
-                                });
-                            }
-                        });
-
-                    })
-                });
-            }
-        </script>
         <div id="footer"></div> <!-- common-footer -->
     </div>
     </div>
     <script src="../js/topNav.js"></script>
     <script src="../js/prodData.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        window.onload = function () {
+            
+            commonCartNum();
+        }
+    </script>
     <script type="text/javascript">
         $(function () {
             $("#header").load("html/header.html");

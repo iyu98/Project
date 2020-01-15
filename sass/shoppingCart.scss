@@ -4,7 +4,10 @@
 }
 
 .shopping-wrap {
-    height: 500px;
+    min-height: 500px;
+    _height: 500px;
+    *height: 500px;
+    margin-bottom: 30px;
 
     & table tr th, & table tr td {
         padding: 15px 0;
@@ -13,6 +16,13 @@
     
     & table thead tr {
         background: #f8f8f8;
+    }
+
+}
+
+.totalPrice {
+    & p {
+        text-align: center;
     }
 }
 
@@ -43,15 +53,10 @@
         }
     }
 
-    & .total-price {
+    & .total-Price {
         text-align: right;
         padding-right: 30px;
 
-        & strong {
-            padding-left: 10px;
-            color: #e60012;
-            font-size: 24px;
-        }
     }
 
     & .submit {
@@ -68,10 +73,15 @@
 }
 
 .prod-info {
+    width: 400px;
     & p {
         text-align: left;
         text-indent: 20px;
     }
+}
+
+.prod-num {
+    width: 150px;
 }
 
 .prod-price {
@@ -148,10 +158,17 @@
 }
 
 .promotion {
-    width: 150px;
+    width: 80px;
 }
 
 .remove {
     width: 60px;
     cursor: pointer;
+}
+
+strong {
+    padding-left: 15px;
+    color: #ff0000;
+    font-size: 24px;
+    font-weight: 700;
 }
