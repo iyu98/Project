@@ -1,4 +1,14 @@
-window.onload = function () {
+; window.onload = function () {
+    /* login register */
+    $("#login, #register").on("click",function(){
+        window.location.href = "http://localhost:8080/html/login.html";
+    })
+    if (window.location.search.split("=")[1]) {
+        $(".login").html("欢迎" + window.location.search.split("=")[1]);
+        $(".register").hide();
+    }
+
+
     $("#hasSubMenu").hover(function () {
         $(".top-menu-list li .sub-menu").show();
     }, function () {
@@ -8,7 +18,7 @@ window.onload = function () {
         window.open("http://iii67.cn/mwgmav", "", "height=643, width=604,top=80, left=500,z-look=yes");
     });
 
-    $(".icon-cart, #cart").on("click",function () {
+    $(".icon-cart, #cart").on("click", function () {
         window.location.href = "http://localhost:8080/html/shoppingCart.html";
     });
 
@@ -30,15 +40,13 @@ window.onload = function () {
     }
     jjHref("#top-category");
     jjHref("#nav-category");
-    
-    commonCartNum();
 
+    commonCartNum();
 
     /* Go to top */
     $(".right-window").children(".floor5").click(function () {
         $(document).scrollTop(0)
     })
-
 
     /* swiper */
     var swiper = new Swiper('.swiper-container', {

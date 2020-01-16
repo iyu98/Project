@@ -1,4 +1,4 @@
-function commonCartNum() {
+;function commonCartNum() {
     function navCategory(id) {
         $(id).children().children().hover(function () {
             $(this).children("div").show().end().children("span").children("span").show()

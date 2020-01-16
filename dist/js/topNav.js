@@ -1,4 +1,4 @@
-$(function () {
+;$(function () {
     $("#fixed-top-nav").hide();
     let navTop = $("#shop-fenlei-nav").offset().top;
     $(window).scroll(function () {
