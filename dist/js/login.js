@@ -1,9 +1,31 @@
 ; $(function () {
     $(".loginSwitch").click(function () { $(this).addClass("active").siblings().removeClass("active"); $(".loginContainer").show().siblings(".registerContainer").hide() }); $(".registerSwitch").click(function () { $(this).addClass("active").siblings().removeClass("active"); $(".registerContainer").show().siblings(".loginContainer").hide(); });
 
+    let regEmail = /^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/;
+    let regPw = /^[a-z0-9_-]{6,18}$/;
+    $(".registerId").bind("input propertychange",function (e) { 
+        if (!regEmail.test($(this).val())) {
+            $(".loginAlert1").show();
+        } else {
+            $(".loginAlert1").hide();
+        }
+    });
+    $(".registerPw").bind("input propertychange",function (e) {
+        if (!regPw.test($(this).val())) {
+            $(".loginAlert2").show();
+        } else {
+            $(".loginAlert2").hide();
+        }
+    });
+
+
+
+
     $(".loginBtn").click(function () {
+        
         let userId = $(".loginId").val();
         let userPw = md5($(".loginPw").val());
+
         $.ajax({
             type: "get",
             url: "http://localhost:3000/user/" + userId,

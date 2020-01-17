@@ -29,7 +29,7 @@
 
         .loginWrap {
             width: 360px;
-            height: 300px;
+            height: 400px;
             border-radius: 5px;
             position: relative;
             overflow: hidden;
@@ -68,7 +68,7 @@
         .loginContainer,
         .registerContainer {
             width: 360px;
-            height: 260px;
+            height: 360px;
             position: absolute;
             top: 40px;
             left: 0;
@@ -134,15 +134,21 @@
         </div>
         <div class="loginContainer">
             <h2>登录</h2>
-            <input class="loginId" type="text" placeholder="请输入用户名">
+            <input class="loginId" type="text" placeholder="请输入邮箱">
             <input class="loginPw" type="password" placeholder="请输入密码">
             <span class="loginBtn">Login</span>
         </div>
         <div class="registerContainer">
             <h2>注册</h2>
             <input class="registerId" type="text" placeholder="请输入用户名">
+            <!-- <i class="loginAlert1" style="color: red;display: none;">您输入邮箱格式不正确!</i> -->
             <input class="registerPw" type="password" placeholder="请输入密码">
+            <!-- <i class="loginAlert2" style="color: red;display: none;">密码格式不正确</i> -->
             <span class="registerBtn">Register</span>
+                        <i class="loginAlert1" style="color: red;display: none; font-style: normal;">您输入邮箱格式不正确!</i>
+                        <br>
+                        <i class="loginAlert2" style="color: red;display: none; font-style: normal;">密码格式不正确</i>
+
         </div>
     </div>
     <script src="../js/login.js"></script>

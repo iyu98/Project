@@ -75,7 +75,7 @@
       "priceLabel": "商城价",
       "price": "499",
       "state": "false",
-      "prodNum": "2"
+      "prodNum": "0"
     },
     {
       "id": 10008,
@@ -207,7 +207,7 @@
       "priceLabel": "商城价",
       "price": 35,
       "state": "false",
-      "prodNum": "2"
+      "prodNum": "1"
     },
     {
       "id": 10020,
@@ -222,6 +222,17 @@
     }
   ],
   "user": [
-    
+    {
+      "id": "aa123456",
+      "password": "25f9e794323b453885f5181f1b624d0b"
+    },
+    {
+      "id": "123456@qq.com",
+      "password": "e10adc3949ba59abbe56e057f20f883e"
+    },
+    {
+      "id": "register@163.com",
+      "password": "a6853056e80e06d23a61745819925613"
+    }
   ]
 }
